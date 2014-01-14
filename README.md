@@ -137,15 +137,4 @@ quit
 This command terminates the peer and exits the program. Before
 completely exiting the program, it informs the neighbours and the
 central server about the same.
-
-Further Information
-===================
-
-A quick bird’s eye view of the inner working of the programs can be
-achieved by taking a look at the JavaDocs available in the **docs**
-directory. It contains all the classes and methods used in the program.
-
-Further exploration can be done by going through the source code in the
-**code** directory. All source files have been properly and thoroughly
-commented so that it is easy to understand the code even for a non-java
-programmer.
+.
