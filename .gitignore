@@ -1,3 +1,11 @@
 /bin
-readme.*
+readme.tex
+readme.aux
+readme.dvi
+readme.pdf
+readme.toc
+readme.tex.bak
+readme.out
+readme.synctex.gz
+readme.log
 Ranjan+4924202.tar
