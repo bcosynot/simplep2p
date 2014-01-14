@@ -1,12 +1,3 @@
----
-authors:
-- 'Vivek Ranjan - 4924202'
-date: 'Due on: 10^th^ December, 2013'
-title: |
-     **Fall 2013 Programming Project**\
-    **CSci 5211** 
-...
-
 About
 =====
 
@@ -14,30 +5,6 @@ The project is a Peer-to-Peer (P2P) file sharing system, written in Java
 and implemented by using sockets. This document lists down all the
 features that have been implemented and how to use the various programs.
 
-Archive Contents
-================
-
-The archive contains the following folders/directories:
-
-code
-:   Contains all the source files for the project. All source files are
-    heavily commented to ensure high readability and make the code easy
-    to understand for non-java programmers too.
-
-lib
-:   Contain a few libraries (mostly related to logging) that have been
-    used in the programs.
-
-docs
-:   Contains JavaDocs detailing all the classes and methods that are
-    used. Open index.html in any browser to start.
-
-executables
-:   Contains all the executable files that can be used to run the
-    programs. Instructions on how to run the programs are provided
-    below. These are independent (do not require any of the other files
-    in the archive) and portable (can be run on any environment that
-    satisfies the requirements stated below.)
 
 Running The Programs
 ====================
@@ -48,12 +15,9 @@ Requirements
 The programs do require java to be installed on the machine prior to
 running it. Instructions for installing the Java Runtime Environment
 (JRE) can be found on the following link -
-<https://www.java.com/en/download/help/download_options.xml>. Do note
-that the CS grad lab machines (cello, trombone, etc) and the CSE lab
-machines, both already have Java installed and can be used to run these
-programs. These programs have been tested to run on the Linux machines
-on both labs. Running the programs is simple and follows the
-requirements stated in the programming project description.
+<https://www.java.com/en/download/help/download_options.xml>. 
+
+Running the programs is simple.
 
 Central Server
 --------------
