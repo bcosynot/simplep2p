@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<project name="DCCNProoject" default="info">
+    <property name="one-jar.dist.dir" value="c:/Users/Vivek/.ant/one-jar"/> 
+	<import file="${one-jar.dist.dir}/one-jar-ant-task.xml" optional="true" /> 
+	<property file="build.properties" />
+	<target name="info">
+		<echo>Apache Ant version is ${ant.version}. Src=${srcdir}</echo>
+	</target>
+	<target name="deploy">
+		<echo>Creating JAR file at ${builddir}/peer.jar</echo>
+		<jar destfile="${packagedir}peermain.jar" basedir="${builddir}">
+		    <manifest>
+				<attribute name="Main-Class" value="edu.umn.cs.dccn.proj1.com.Peer" />
+			</manifest>
+		</jar>
+		<one-jar destfile="${packagedir}peer.jar">
+		    <manifest>
+				<attribute name="Main-Class" value="edu.umn.cs.dccn.proj1.com.Peer" />
+			</manifest>
+			<main jar="${packagedir}peermain.jar"/>
+			 <lib>
+                <fileset file="${libdir}**.jar" />
+            </lib>
+		</one-jar>
+		<echo>Sending file to ${ftp_host1}:${ftp_loc1}</echo>
+		<scp file="${packagedir}/peer.jar" todir="${ftp_user1}:${ftp_pwd1}@${ftp_host1}:${ftp_loc1}" trust="true"/>
+		<echo>Sending file to ${ftp_host2}:${ftp_loc2}</echo>
+		<scp file="${packagedir}/peer.jar" todir="${ftp_user2}:${ftp_pwd2}@${ftp_host2}:${ftp_loc2}" trust="true"/>
+		<echo>Creating JAR file at ${builddir}/centralserver.jar</echo>
+		<jar destfile="${packagedir}centralservermain.jar" basedir="${builddir}">
+		    <manifest>
+				<attribute name="Main-Class" value="edu.umn.cs.dccn.proj1.com.CentralServer" />
+			</manifest>
+		</jar>
+		<one-jar destfile="${packagedir}centralserver.jar">
+		    <manifest>
+				<attribute name="Main-Class" value="edu.umn.cs.dccn.proj1.com.CentralServer" />
+			</manifest>
+			<main jar="${packagedir}centralservermain.jar"/>
+			 <lib>
+                <fileset file="${libdir}**.jar" />
+            </lib>
+		</one-jar>
+		<echo>Sending file to ${ftp_host1}:${ftp_loc1}</echo>
+		<scp file="${packagedir}/centralserver.jar" todir="${ftp_user1}:${ftp_pwd1}@${ftp_host1}:${ftp_loc1}" trust="true"/>
+		<echo>Sending file to ${ftp_host2}:${ftp_loc2}</echo>
+		<scp file="${packagedir}/centralserver.jar" todir="${ftp_user2}:${ftp_pwd2}@${ftp_host2}:${ftp_loc2}" trust="true"/>
+	</target>
+</project>
